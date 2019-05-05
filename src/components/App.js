@@ -1,9 +1,16 @@
 import React from 'react';
+import WordBox from './WordBox';
 
 class App extends React.Component {
+ 
 
   render() {
-    return <div>App</div>
+    return (
+      <div>
+        <WordBox />
+      </div>
+
+    )
   }
 }
 
