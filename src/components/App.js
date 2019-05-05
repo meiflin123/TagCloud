@@ -1,5 +1,6 @@
 import React from 'react';
 import WordBox from './WordBox';
+import MyCloud from './MyCloud';
 
 class App extends React.Component {
  
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div>
         <WordBox />
+        <MyCloud />
       </div>
 
     )

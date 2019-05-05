@@ -5,7 +5,9 @@ class WordBox extends React.Component {
   // create a text area and a button in a form
   // create onChange handler for text area
     // record state
-  // when the input is submitted, text area should be emptied. 
+  // when the input is submitted, 
+    //text should be sorted and sent to TagCloud.
+    //text area should be emptied. 
 
   handleText = e => {
     this.setState({ text: e.target.value });
