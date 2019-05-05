@@ -5,8 +5,10 @@ import randomColor from 'randomcolor';
 class MyCloud extends React.Component {
 
   render() {
+    console.log(this.props.mostFreqW, this.props.otherWords)
     return (
       <div className='container'>
+        {this.props.children}
         <div className='inner-container'>
 
          <TagCloud 
