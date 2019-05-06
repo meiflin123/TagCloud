@@ -34,6 +34,7 @@ class WordBox extends React.Component {
           <button className="ui primary button">Submit Text</button>
         </div>
       </form>
+      
     )
   }
 }
