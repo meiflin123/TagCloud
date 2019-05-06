@@ -2,22 +2,17 @@ import React from 'react';
 import TagCloud from 'react-tag-cloud';
 import randomColor from 'randomcolor';
 
-class MyCloud extends React.Component {
+const MyCloud = (props) => {
 
-
-  
-
-  render() {
-    console.log(this.props.data)
+ 
     return (
       <div className='container'>
-        {this.props.children}
+        {props.children}
         <div className='inner-container'>
 
          <TagCloud 
           style={{
           fontFamily: 'sans-serif',
-          fontSize: 30,
           fontWeight: 'bold',
           fontStyle: 'italic',
           color: () => randomColor(),
@@ -25,16 +20,20 @@ class MyCloud extends React.Component {
           width: '100%',
           height: '100%'
           }}>
-          <div style={{fontSize: 50}}>react</div>
-          <div style={{color: 'green'}}>tag</div>
-          <div rotate={90}>cloud</div>
+
+        
+          { props.data.map(item => 
+
+            <div key={props.data.indexOf(item)}
+                 style={{fontSize: Math.log2(item.value) * 50}}
+                 rotate={ item.value % 360 }>{item.word}</div>)}
         
          </TagCloud>
 
         </div>
       </div>
     );
-  }
+ 
 }
 
 export default MyCloud;

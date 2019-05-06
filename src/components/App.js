@@ -14,7 +14,7 @@ class App extends React.Component {
   // most frequent word will have a significant size, the rest will share same size. 
 
   // option 2 
-  // create hash table to save occurance of each word. e.g. {'aaa': 2, 'bb': 1, 'ccc': 2}
+  // create hash table to save occurance of each word. e.g. {{ word: 'aaa', value: 2 }, { word: 'bb', value: 1 }}
   // pass to tag Cloud, each word will have varied size according to its value. 
 
   /*state = { mostFreqW: [], otherWords: [] }
@@ -59,6 +59,7 @@ class App extends React.Component {
   recordOccurance = text => {
     let words = text.split(' ')
     let table = {};
+    let data = []
 
     for (let i in words) {
       let word = words[i]
@@ -69,7 +70,11 @@ class App extends React.Component {
         table[word]+= 1;
       }
     }
-    this.setState({ data: table })
+
+    for (let j in table) {
+      data.push({ word: j, value: table[j] });
+    }
+    this.setState({ data: data })
 
     console.log(this.state.data)
 

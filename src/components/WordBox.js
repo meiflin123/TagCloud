@@ -19,7 +19,7 @@ class WordBox extends React.Component {
   handleSubmit = e => {
     e.preventDefault();
 
-    this.props.findMostFreqW(this.state.text);
+    this.props.recordOccurance(this.state.text);
     
     this.setState({ text: '' }); 
     
