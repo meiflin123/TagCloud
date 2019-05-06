@@ -24,5 +24,11 @@
 }
 
 .tag-cloud > div {
-  transition: 3.3s;
+  transition: 1.3s;
+}
+
+.tag-item:hover {
+  background-color: #9ACD32;
+  cursor: pointer;
+
 }

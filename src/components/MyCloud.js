@@ -4,7 +4,6 @@ import randomColor from 'randomcolor';
 
 class MyCloud extends React.Component {
 
- 
   componentDidMount() {
     setInterval(() => {
       this.forceUpdate();
@@ -32,9 +31,10 @@ class MyCloud extends React.Component {
 
         
           { this.props.data.map(item => 
-
-            <div key={this.props.data.indexOf(item)}
-                 style={{fontSize: Math.log2(item.value) * 10, backgroundColor: this.backgroundColor}}
+           
+            <div className="tag-item"
+                 key={ this.props.data.indexOf(item) }
+                 style={{ fontSize: Math.log2(item.value) * 10 }}
                  rotate={ item.value % 360 }>{item.word}
 
             </div>)}
