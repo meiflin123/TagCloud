@@ -4,8 +4,11 @@ import randomColor from 'randomcolor';
 
 class MyCloud extends React.Component {
 
+
+  
+
   render() {
-    console.log(this.props.mostFreqW, this.props.otherWords)
+    console.log(this.props.data)
     return (
       <div className='container'>
         {this.props.children}
