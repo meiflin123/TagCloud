@@ -29,7 +29,8 @@ class WordBox extends React.Component {
      return (
       <form onSubmit={this.handleSubmit}>
         <h4>Enter some text!</h4>
-        <textarea onChange={this.handleText} value={this.state.text} />
+    
+        <textarea onChange={ this.handleText } value={ this.state.text } cols="80" rows="5"/>
         <div>
           <button>Submit Text</button>
         </div>

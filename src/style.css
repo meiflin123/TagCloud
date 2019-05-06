@@ -8,6 +8,7 @@
   bottom: 0;
   left:0;
   right:0;
+
 }
 
 .inner-container {
@@ -17,5 +18,10 @@
 }
 
 
+.tag-cloud {
+  flex: auto;
+}
 
-
+.tag-cloud > div {
+  transition: 3.3s;
+}
